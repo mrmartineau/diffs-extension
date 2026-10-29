@@ -1,0 +1,98 @@
+/* Primer design tokens from github.com, so light, dark and high-contrast themes all match */
+
+#pr-elsewhere {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: var(--base-size-8, 8px);
+}
+
+.pr-elsewhere-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--base-size-4, 4px);
+  height: var(--control-small-size, 28px);
+  padding: 0 var(--control-small-paddingInline-condensed, 8px);
+  font: inherit;
+  font-size: var(--text-body-size-small, 12px);
+  font-weight: var(--base-text-weight-medium, 500);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--button-default-fgColor-rest);
+  background: var(--button-default-bgColor-rest);
+  border: var(--borderWidth-thin, 1px) solid var(--button-default-borderColor-rest);
+  border-radius: var(--borderRadius-medium, 6px);
+  box-shadow: var(--button-default-shadow-resting);
+  cursor: pointer;
+  transition: background-color 80ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.pr-elsewhere-button .octicon {
+  color: var(--fgColor-muted);
+}
+
+.pr-elsewhere-button:hover {
+  background: var(--button-default-bgColor-hover);
+  border-color: var(--button-default-borderColor-hover);
+}
+
+.pr-elsewhere-button:active,
+.pr-elsewhere-button:has(+ :popover-open) {
+  background: var(--button-default-bgColor-active);
+  border-color: var(--button-default-borderColor-active);
+}
+
+.pr-elsewhere-button:focus-visible {
+  outline: 2px solid var(--focus-outlineColor);
+  outline-offset: -2px;
+}
+
+.pr-elsewhere-menu {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  min-width: 192px;
+  padding: var(--base-size-8, 8px);
+  color: var(--fgColor-default);
+  background: var(--overlay-bgColor);
+  border: 0;
+  border-radius: var(--borderRadius-large, 12px);
+  box-shadow: var(--shadow-floating-small);
+}
+
+.pr-elsewhere-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--base-size-16, 16px);
+  padding: var(--control-medium-paddingBlock, 6px) var(--control-medium-paddingInline-condensed, 8px);
+  font-size: var(--text-body-size-medium, 14px);
+  line-height: 20px;
+  color: var(--fgColor-default);
+  border-radius: var(--borderRadius-medium, 6px);
+  text-decoration: none;
+}
+
+.pr-elsewhere-item:hover,
+.pr-elsewhere-item:focus-visible {
+  background: var(--control-transparent-bgColor-hover);
+  text-decoration: none;
+  outline: none;
+}
+
+.pr-elsewhere-item:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--focus-outlineColor);
+}
+
+.pr-elsewhere-item kbd {
+  font: inherit;
+  font-size: var(--text-body-size-small, 12px);
+  color: var(--fgColor-muted);
+  background: none;
+  border: var(--borderWidth-thin, 1px) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-small, 3px);
+  padding: 0 var(--base-size-4, 4px);
+  min-width: 20px;
+  text-align: center;
+  box-shadow: none;
+}

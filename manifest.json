@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "PR Elsewhere",
+  "version": "0.1.0",
+  "description": "Open GitHub pull requests in Diffshub, pulls.review and Graphite.",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pr-elsewhere@zander.wtf",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
+}
